@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 
 namespace CrazyStorm_1._03 {
     static class Program {
@@ -34,22 +35,25 @@ namespace CrazyStorm_1._03 {
                                 continue;
                             filtered.Add (item);
                         }
-                        Console.Write (filtered.Count);
-                        Console.Write (' ');
-                        for (int i = 0; i < filtered.Count; i++) {
-                            Barrage b = filtered[i];
-                            Console.Write (b.x);
-                            Console.Write (' ');
-                            Console.Write (b.y);
-                            Console.Write (' ');
-                            Console.Write (b.type);
-                            Console.Write (' ');
-                            Console.Write (b.wscale);
-                            Console.Write (' ');
-                            Console.Write (b.hscale);
-                            Console.Write (' ');
-                            Console.Write (b.Blend);
-                            Console.Write (' ');
+                        using (MemoryStream ms = new MemoryStream()) {
+                            using (BinaryWriter bw = new BinaryWriter(ms)) {
+                                for (int i = 0; i < filtered.Count; i++) {
+                                    Barrage b = filtered[i];
+                                    bw.Write (b.x);
+                                    bw.Write (b.y);
+                                    bw.Write (150);
+                                    bw.Write (b.wscale);
+                                    bw.Write (b.hscale);
+                                    bw.Write (b.Blend);
+                                }
+                                Console.Write (ms.Length.ToString ("0000000000"));
+                                Console.Out.Flush ();
+                                using (Stream stdout = Console.OpenStandardOutput()) {
+                                    ms.Seek (0, SeekOrigin.Begin);
+                                    ms.CopyTo (stdout);
+                                    stdout.Flush ();
+                                }
+                            }
                         }
                         break;
                     default:
