@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: E:\CrazyStorm 1.03I\CrazyStorm 1.03.exe-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4A02DE99-33A6-42EE-B080-D33EAC4BD010}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>CrazyStorm 1.03</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>CrazyStorm_1._03</RootNamespace>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.3</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="dataReader.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dataReader.Designer.cs">
+      <DependentUpon>dataReader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Th902Interface.cs" />
+    <Compile Include="Layer\Batch.cs" />
+    <Compile Include="MathHelper.cs" />
+    <Compile Include="Player.cs" />
+    <Compile Include="Barrage.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="Vector2.cs" />
+    <Compile Include="Line.cs" />
+    <Compile Include="Layer\Force.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Layer\Cover.cs" />
+    <Compile Include="Layer\Rebound.cs" />
+    <Compile Include="Layer.cs" />
+    <Compile Include="Center.cs" />
+    <Compile Include="Layer\Event.cs" />
+    <Compile Include="Layer\EventRead.cs" />
+    <Compile Include="Layer\Execution.cs" />
+    <Compile Include="Layer\BExecution.cs" />
+    <Compile Include="Layer\COExecution.cs" />
+    <Compile Include="Layer\LExecution.cs" />
+    <Compile Include="Layer\BLExecution.cs" />
+    <Compile Include="Layer\CExecution.cs" />
+    <Compile Include="Time.cs" />
+    <Compile Include="Layer\Lase.cs" />
+    <Compile Include="Shadows.cs" />
+    <Compile Include="Character.cs" />
+    <Compile Include="characterType.cs" />
+    <Compile Include="BarrageType.cs" />
+    <Compile Include="GlobalEvent.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="dataReader.resx">
+      <DependentUpon>dataReader.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
