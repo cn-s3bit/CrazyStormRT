@@ -8,7 +8,7 @@ namespace CrazyStorm_1._03 {
         /// 应用程序的主入口点。
         /// </summary>
         static void Main () {
-            new Main ().Initialize ();
+            new Main ().Initialize ("set.xna");
             while(true) {
                 string command = Console.ReadLine ();
                 switch (command[0]) {
