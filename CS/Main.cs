@@ -24,9 +24,25 @@ namespace CrazyStorm_1._03 {
         public Main() {
         }
 
-        public void Initialize() {
+        public void Initialize(string path) {
             Available=false;
             rand=new Random(); 
+            StreamReader streamReader1 = new StreamReader(Cry.Decry(path));
+            for(int index = 0;index<228;++index) {
+                string str = streamReader1.ReadLine();
+                BarrageType barrageType = new BarrageType {
+                    origin=new PointF(int.Parse(str.Split('_')[5]),int.Parse(str.Split('_')[6])),
+                    origin0=new PointF(int.Parse(str.Split('_')[5]),int.Parse(str.Split('_')[6])),
+                    pdr0=int.Parse(str.Split('_')[7])
+                };
+                if(str.Split('_')[8]!="") {
+                    barrageType.color=int.Parse(str.Split('_')[8]);
+                } else {
+                    barrageType.color=-1;
+                }
+                bgset.Add(barrageType);
+            }
+            streamReader1.Close();
             type.Add("正比",0);
             type.Add("固定",1);
             type.Add("正弦",2);
