@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{4A02DE99-33A6-42EE-B080-D33EAC4BD010}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <AssemblyName>CrazyStorm 1.03</AssemblyName>
+    <AssemblyName>CrazyStormRT</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <RootNamespace>CrazyStorm_1._03</RootNamespace>
@@ -61,6 +61,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cry.cs" />
     <Compile Include="Th902Interface.cs" />
     <Compile Include="Layer\Batch.cs" />
     <Compile Include="MathHelper.cs" />
@@ -104,6 +105,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <EmbeddedResource Include="set.xna" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
