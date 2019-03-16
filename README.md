@@ -45,8 +45,13 @@ The number is padded to the length of 10. Eg. `0000000125`.
 
 The next `L` bytes is binary data in big endian.
 
-A bullet is defined by 11 fields: x, y, type, width, height, additive?, r, g, b, alpha, rotation,
-where most of them is single `float` with a size of 4 bytes.
+A bullet is defined by 11 fields: `x, y, type, width, height, additive?, r, g, b, alpha, rotation`,
+where most of them are single `float` with a size of 4 bytes.
+
+#### Notes:
+
 `type` is an integer with a size of 4 bytes, indicating bullet type in CrazyStorm.
+
 `additive?` is an unsigned char with a size of 1 byte, 1 for additive rendered bullet and 0 otherwise.
+
 `r`, `g`, `b` and `alpha` are all normalized to `[0, 1]`.
