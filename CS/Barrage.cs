@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace CrazyStorm_1._03 {
@@ -841,7 +841,8 @@ namespace CrazyStorm_1._03 {
                         }
                     }
                      if(time>num1+life) {
-                        if(Dispel&type>=0) { 
+                        NeedDelete = true;
+                        if (Dispel&type>=0) {
                         } else {
                             NeedDelete=true;
                         }
