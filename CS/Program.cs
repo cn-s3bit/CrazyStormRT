@@ -33,6 +33,8 @@ namespace CrazyStorm_1._03 {
                         foreach (var item in list) {
                             if (item.IsLase || item.IsRay)
                                 continue;
+                            if (item.x < -320.0f || item.x > 960.0f || item.y < -240.0f || item.y > 720.0f)
+                                continue;
                             filtered.Add (item);
                         }
                         using (MemoryStream ms = new MemoryStream()) {
