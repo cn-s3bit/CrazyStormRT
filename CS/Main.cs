@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -31,8 +31,8 @@ namespace CrazyStorm_1._03 {
             for(int index = 0;index<228;++index) {
                 string str = streamReader1.ReadLine();
                 BarrageType barrageType = new BarrageType {
-                    origin=new PointF(int.Parse(str.Split('_')[5]),int.Parse(str.Split('_')[6])),
-                    origin0=new PointF(int.Parse(str.Split('_')[5]),int.Parse(str.Split('_')[6])),
+                    origin=new Vector2(int.Parse(str.Split('_')[5]),int.Parse(str.Split('_')[6])),
+                    origin0=new Vector2(int.Parse(str.Split('_')[5]),int.Parse(str.Split('_')[6])),
                     pdr0=int.Parse(str.Split('_')[7])
                 };
                 if(str.Split('_')[8]!="") {
@@ -241,12 +241,10 @@ namespace CrazyStorm_1._03 {
                     }
                 }
                 for(int index2 = 0;index2<Layer.LayerArray[index1].Barrages.Count;++index2) {
-                    if(!Layer.LayerArray[index1].Barrages[index2].Blend) {
-                        if(!Layer.LayerArray[index1].Barrages[index2].NeedDelete) {
-                        } else {
-                            Layer.LayerArray[index1].Barrages.RemoveAt(index2);
-                            --index2;
-                        }
+                    if(!Layer.LayerArray[index1].Barrages[index2].NeedDelete) {
+                    } else {
+                        Layer.LayerArray[index1].Barrages.RemoveAt(index2);
+                        --index2;
                     }
                 }
             }
