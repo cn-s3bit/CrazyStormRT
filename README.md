@@ -31,9 +31,9 @@ The battle field is of the size `960x720`.
 
 ### Recognized Commands
 + `o<path>` Load an MBG file from `<path>`. Note that there are no whitespaces between `o` and `<path>`.
-+ `p<x>,<y>` Sets the player position in CrazyStormRT to (<x>, <y>). Collision between player and bullets is removed, but snipes still work.
++ `p<x>,<y>` Sets the player position in CrazyStormRT to (`<x>`, `<y>`). Collision between player and bullets is removed, but snipes still work.
 + `u` Updating for one frame.
-+ `r<integer>` Sets the random seed to <integer>.
++ `r<integer>` Sets the random seed to `<integer>`.
 + `q` Exit.
 + `g` Fetch the current projectiles. For result formats, see [below](#Output).
 
