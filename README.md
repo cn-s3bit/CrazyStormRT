@@ -57,7 +57,7 @@ where most of them are single `float` with a size of 4 bytes.
 `r`, `g`, `b` and `alpha` are all normalized to `[0, 1]`.
 
 # CrazyStormRT(中文版Readme)
-著名的弹幕设计器CrazyStorm的修改版(中文版Readme并非英文版作者 目前尚未做校对 可能会有错误)
+著名的弹幕设计器CrazyStorm的修改版 **中文版Readme并非英文版作者 目前尚未做校对 可能会有错误**
 ## 简介
 CrazyStorm是一个弹幕(或者说是2D粒子)设计器，它拥有一个强大的事件系统，能让我们在不使用任何代码的情况下实现弹幕复杂的移动行为。
 
