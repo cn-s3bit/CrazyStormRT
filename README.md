@@ -67,7 +67,7 @@ CrazyStorm是一个弹幕(或者说是2D粒子)设计器，它拥有一个强大
 ## 开始
 你可以clone并且在Visual Studio上建立项目，不过这里要选择.Net Core(其实是CoreRT)，它可以编译x64图片的代码，所以不再需要在代码中添加JIT操作，保证结果能在不同的运行环境下保持一致(I.E. Replays)。
 
-CoreRT编译指令行:
+CoreRT编译命令行:
 ```batch
 dotnet publish -r win-x64 -c release
 ```
