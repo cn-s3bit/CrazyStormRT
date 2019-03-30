@@ -73,7 +73,7 @@ dotnet publish -r win-x64 -c release
 ```
 你需要确定.Net Core SDK 2.x能正常使用。首次编译可能会花些许时间，因为需要CoreRT从NuGet上下载下来。
 ## 使用
-运行项目(没有命令行选择必要)。项目从Stdin读取命令并且通过Stdout写入外部数据。
+运行项目(没有命令行选择必要)。项目从`Stdin`读取命令并且通过`Stdout`写入外部数据。
 
 战斗区域是`960×720`
 ### 公认的命令
