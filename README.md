@@ -61,11 +61,11 @@ where most of them are single `float` with a size of 4 bytes.
 ## 简介
 CrazyStorm是一个弹幕(或者说是2D粒子)设计器，它拥有一个强大的事件系统，能让我们在不使用任何代码的情况下实现弹幕复杂的移动行为。
 
-这个项目是CrazyStorm 1.03I的改动版。MBG文件的解析和事件逻辑仍然和原来一致，但是渲染部分被移除了,这样让它不再依赖于其他的框架。
+这个项目是CrazyStorm 1.03I的改动版。MBG文件的解析和事件逻辑仍和原来的一致，但是渲染部分被移除了，这样能让它不再依赖于其他的框架。
 
 我们仍在修改激光。激光和一般的弹幕不太一样。
 ## 开始
-你可以clone并且在Visual Studio上建立项目，不过这里要选择.Net Core(其实是CoreRT)，它可以编译x64图片的代码，所以不再需要在代码中添加JIT操，保证结果能在在不同的运行下保持一致(I.E. Replays)。
+你可以clone并且在Visual Studio上建立项目，不过这里要选择.Net Core(其实是CoreRT)，它可以编译x64图片的代码，所以不再需要在代码中添加JIT操作，保证结果能在不同的运行环境下保持一致(I.E. Replays)。
 
 CoreRT编译指令行:
 ```batch
