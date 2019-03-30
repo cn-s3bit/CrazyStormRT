@@ -83,6 +83,7 @@ dotnet publish -r win-x64 -c release
 + `r<integer>`设置一个`<integer>`的随机种子
 + `q`退出
 + `g`取得当前弹幕。关于格式，看[下面的"输出"](#输出)。
+
 其他命令忽视掉了。空行会导致异常。
   
 ### 输出
